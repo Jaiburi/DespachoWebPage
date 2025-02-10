@@ -1,0 +1,181 @@
+body {
+    background-color: #0070c0; /* Azul rey suave */
+    color: white; /* Texto en blanco para mejor contraste */
+    font-family: Arial, sans-serif; /* Fuente más estilizada */
+    margin: 0;
+    padding: 0;
+    font-family: 'Tenorite', Arial, sans-serif;
+}
+
+footer{
+    font-family: 'Tenorite', Arial, sans-serif;
+}
+
+.header {
+    background-color: white;
+    width: calc(100%-20px);
+    padding: 10px 0px 10px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+    /*border-radius: 50%; Hace la imagen circular */
+}
+
+.principal {
+    width: 100%; /* Ocupar todo el ancho */
+    height: 70vh; /* Ocupar el 70% de la altura de la pantalla */
+    object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformarla */
+    object-position: center; /* Mantiene el centro visible */
+    display: block; /* Evita márgenes no deseados */
+    margin: 0 auto; /* Asegura alineación */
+}
+
+button{
+    font-family: 'Tenorite', Arial, sans-serif;
+}
+
+/* Contenedor de los botones */
+.boton-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Asegura que ocupen toda la altura */
+    gap: 0; /* Sin espacio entre botones */
+    width: 100%; /* Ajusta según necesites */
+    margin: 0 auto; /* Elimina espacio arriba y abajo */
+    padding: 0; /* Asegura que no haya relleno */
+    flex-wrap: wrap; /* Permite que los botones se acomoden si no caben */
+}
+
+/* Estilo de los botones */
+.boton-container a {
+    flex: 1;
+    text-decoration: none;
+}
+
+.boton-container button {
+    width: 100%;
+    background-color: #0070c0;
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 20px 0;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+    position: relative;
+}
+
+.boton-container a:not(:last-child) {
+    border-right: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Hover */
+.boton-container button:hover {
+    background-color: #2C4AA5;
+}
+
+/* Click */
+.boton-container button:active {
+    transform: scale(0.95);
+}
+
+/* Estilo para vista en pantallas pequeñas (cambia a vertical) */
+@media screen and (max-width: 768px) {
+    .boton-container {
+        flex-direction: column; /* Cambia a vertical */
+    }
+
+    .boton-container a {
+        width: 100%;
+    }
+
+    .boton-container button {
+        width: 100%;
+    }
+
+    .boton-container a:not(:last-child) {
+        border-right: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* Asegura que el HTML y el body ocupen toda la pantalla */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hace que el contenido principal crezca y empuje el footer */
+.main-content {
+    flex: 1;
+}
+
+footer {
+    background-color: #262626;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between; /* Elementos en extremos */
+    align-items: center;
+    min-height: 50px;
+    flex-wrap: wrap; /* Permite que cambie de forma si es necesario */
+}
+
+/* Contenedor que agrupa todo */
+.footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para que los elementos se reorganicen si no caben */
+}
+
+/* Sección izquierda (Dirección) */
+.footer-left {
+    flex: 1; /* Ocupa el espacio disponible */
+    min-width: 200px; /* Evita que se encoja demasiado */
+}
+
+/* Sección derecha (Redes sociales y correo) */
+.footer-right {
+    display: flex;
+    gap: 30px 10px; /* Espacio entre elementos */
+    flex-wrap: wrap; /* Se ajusta si no hay espacio */
+    justify-content: flex-end;
+    align-items: center; /* Centra los íconos verticalmente */
+    min-width: 200px; /* Evita que se encoja demasiado */
+}
+
+/* Ajusta el tamaño de los logos */
+.footer-right img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Cambio a vista vertical en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Elementos en columna */
+        align-items: center; /* Centra todo */
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-right {
+        flex-direction: column; /* Íconos en columna */
+        align-items: center; /* Centra los íconos */
+        gap: 10px;
+    }
+
+    .footer-left {
+        text-align: center; /* Centra la dirección */
+    }
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('partials/header') %>
+    <title>Página Principal</title>
+</head>
+<body>
+    <div class="main-content">
+        <picture>
+            <source srcset="/images/Principal_movil.png" media="(max-width: 768px)">
+            <img src="/images/Principal.png" alt="FondoPrincipal" class="principal">
+        </picture>
+
+        <div class="boton-container">
+            <a href="/empresa"><button>Soy Empresa</button></a>
+            <a href="/candidato"><button>Soy Candidato</button></a>
+            <a href="/implementador"><button>Soy Implementador</button></a>
+        </div>
+    </div>
+</body>
+<%- include('partials/footer') %>
+</html>
