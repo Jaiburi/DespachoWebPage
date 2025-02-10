@@ -115,21 +115,30 @@ html, body {
 /* Hace que el contenido principal crezca y empuje el footer */
 .main-content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Estilo del footer */
 footer {
-    background-color: #262626;
+    background-color: #262626; /* Fondo gris para todo el footer */
     color: white;
-    padding: 20px 40px;
     display: flex;
     justify-content: space-between; /* Elementos en extremos */
     align-items: center;
+    height: 30%;
     min-height: 50px;
+    max-height: 200px;
     flex-wrap: wrap; /* Permite que cambie de forma si es necesario */
+    flex-grow: 0; /* No hace que el footer crezca si hay espacio disponible */
+    position: relative;
+    padding: 0px;
+    width: 100%; /* Asegura que el footer cubra toda la pantalla */
 }
 
 /* Contenedor que agrupa todo */
 .footer-container {
+    background-color: #262626;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -141,12 +150,14 @@ footer {
 .footer-left {
     flex: 1; /* Ocupa el espacio disponible */
     min-width: 200px; /* Evita que se encoja demasiado */
+    text-align: center; /* Centra la dirección */
 }
 
 /* Sección derecha (Redes sociales y correo) */
 .footer-right {
     display: flex;
     gap: 30px 10px; /* Espacio entre elementos */
+    padding-right: 15%;
     flex-wrap: wrap; /* Se ajusta si no hay espacio */
     justify-content: flex-end;
     align-items: center; /* Centra los íconos verticalmente */
@@ -173,9 +184,21 @@ footer {
         flex-direction: column; /* Íconos en columna */
         align-items: center; /* Centra los íconos */
         gap: 10px;
+        padding-right: 0px;
     }
 
     .footer-left {
         text-align: center; /* Centra la dirección */
     }
+}
+
+/* Agregar una clase al body para asegurarse de que el footer se quede abajo si no hay suficiente contenido */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main {
+    flex-grow: 1; /* Hace que el contenido principal ocupe el espacio disponible */
 }
