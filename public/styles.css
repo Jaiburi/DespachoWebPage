@@ -157,7 +157,7 @@ footer {
 .footer-right {
     display: flex;
     gap: 30px 10px; /* Espacio entre elementos */
-    padding-right: 15%;
+    padding-right: 10%;
     flex-wrap: wrap; /* Se ajusta si no hay espacio */
     justify-content: flex-end;
     align-items: center; /* Centra los íconos verticalmente */
